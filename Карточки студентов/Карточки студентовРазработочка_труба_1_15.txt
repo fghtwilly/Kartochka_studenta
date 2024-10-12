@@ -1,0 +1,18 @@
+{
+  "FIO": "fefb",
+  "Curriculum": {
+    "Faculty": "Разработочка",
+    "Speciality": "труба",
+    "Cource": "1",
+    "Group": "15"
+  },
+  "Address": {
+    "City": "ыва",
+    "PostIndex": "ыва",
+    "Street": "ыав"
+  },
+  "Contacts": {
+    "Phone": "ыва",
+    "Email": "ыва"
+  }
+}

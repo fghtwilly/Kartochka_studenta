@@ -1,0 +1,92 @@
+﻿@model Kartochka_studenta.Models.StudentModel;
+
+
+
+<h2>Карточка студента</h2>
+<table>
+    <tr>
+        <td>ФИО</td>
+        <td>
+            <input id="FIO" value="@Model.FIO" />
+        </td>
+    </tr>
+    <tr>
+        <td>Учебный план</td>
+        <td>
+            <label></label>
+        </td>
+    </tr>
+    <tr>
+        <td>Факультет</td>
+        <td>
+            <input id="Faculty" value="@Model.Curriculum.Faculty" />
+        </td>
+    </tr>
+    <tr>
+        <td>Специальность</td>
+        <td>
+            <input id="Speciality" value="@Model.Curriculum.Speciality" />
+        </td>
+    </tr>
+    <tr>
+        <td>Курс</td>
+        <td>
+            <input id="Cource" value="@Model.Curriculum.Cource" />
+        </td>
+    </tr>
+    <tr>
+        <td>Группа</td>
+        <td>
+            <input id="Group" value="@Model.Curriculum.Group" />
+        </td>
+    </tr>
+    <tr>
+        <td>Адрес</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>Город</td>
+        <td>
+            <input id="City" value="@Model.Address.City" />
+        </td>
+    </tr>
+    <tr>
+        <td>Индекс</td>
+        <td>
+            <input id="PostIndex" value="@Model.Address.PostIndex" />
+        </td>
+    </tr>
+    <tr>
+        <td>Улица</td>
+        <td>
+            <input id="Street" value="@Model.Address.Street" />
+        </td>
+    </tr>
+    <tr>
+        <td>Контакты</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>Номер телефона</td>
+        <td>
+            <input id="Phone" value="@Model.Contacts.Phone" />
+        </td>
+    </tr>
+    <tr>
+        <td>Почта</td>
+        <td>
+            <input id="Email" value="@Model.Contacts.Email" />
+        </td>
+    </tr>
+</table>
+<span id="messageSave" data-validation="SaveNewKart" class="message"></span><br />
+@if (Model.FIO == null)
+{
+    <button type="button" id="save">Создать</button>
+}
+else
+{
+    <button type="button" id="save">Сохранить</button>
+}

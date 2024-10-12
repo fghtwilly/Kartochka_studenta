@@ -1,0 +1,175 @@
+﻿@model StudentViewModel;
+@{
+    int q = 0;
+}
+
+
+<div class="form-group">
+    @*<a href=@Url.Action("Kart", "Kartochka", new { ViewModel = new StudentViewModel() })>Создать новую карточку</a>    "~/Kartochka/Kart" *@
+    <button type="button" id="newkart">Создать новую карточку</button>
+</div>
+<div class="form-group">
+    <label>Фильтровать</label><br />
+    <label>Факультет</label>
+    <select id="select">
+        <option value="nonfilter">Не фильтровать</option>
+        @foreach (var item in Model.filterName.FacultyFilter)
+        {
+            <option value="@item">@item</option>
+        }        
+    </select>
+    <label>Специальность</label>
+    <select id="select1">
+        <option value="nonfilter">Не фильтровать</option>
+        @foreach (var item in Model.filterName.SpecialityFilter)
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+    <label>Курс</label>
+    <select id="select2">
+        <option value="nonfilter">Не фильтровать</option>
+        @foreach (var item in Model.filterName.CourceFilter)
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+    <label>Группа</label>
+    <select id="select3">
+        <option value="nonfilter">Не фильтровать</option>
+        @foreach (var item in Model.filterName.GroupFilter)
+        {
+            <option value="@item">@item</option>
+        }
+    </select><br />
+    <button type="button" id="choicefilter">Фильтровать</button>
+   @*  <button type="button" id="filter">Фильтровать</button> *@
+</div>
+ 
+<div id="studentkart" class="form-group">
+</div>
+@*Html.Partial("Select", $("#select").val()) *@
+<div id="studenttable" class="form-group">
+    <table id="table_orders">
+        @foreach(StudentModel item in Model.studentModel)
+        {
+            <tr>
+            <td>@item.FIO</td>
+            <td>@item.Curriculum.Faculty</td>
+            <td>@item.Curriculum.Speciality</td>
+            <td>@item.Curriculum.Cource</td>
+            <td>@item.Curriculum.Group</td>
+            <td><button type="button" class="btnStudent" id="btnStudent">Выбрать</button></td>
+            </tr> 
+        }
+    </table>
+</div>
+     
+<script>
+    $(document).ready(function () {
+        clickOnBtn();
+
+        function clickOnBtn() {
+            $(".btnStudent").on("click", function (e) {
+                let tdMass = $($(e.target).closest("tr")).children('td');          //вешает слушатель на кнопку для редактирования конкретного студента               
+                $.ajax({
+                    type: "POST",
+                    url: "Kartochka/KartPartial",
+                    data: {
+                        FIOFind: tdMass[0].textContent,
+                        FacultyFind: tdMass[1].textContent,
+                        SpecialityFind: tdMass[2].textContent
+                    },
+                    success: function (data) {
+                        $("#studentkart").html(data);
+                        saveUpdate();
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+        }
+
+        $("#newkart").on("click", function (e) {                            //создание новой карты
+            $.ajax({
+                type: "POST",
+                url: "Kartochka/KartPartial",
+                data: {
+                    FIOFind: null,                    
+                },
+                success: function (data) {
+                    $("#studentkart").html(data);
+                    saveUpdate();
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+
+        $("#choicefilter").on("click", function () {                     // фильтр студентов
+            $.ajax({
+                type: "POST",
+                url: "Kartochka/SelectPartial",
+                data: {
+                    filterFaculty: $("#select").val(),
+                    filterSpeciality: $("#select1").val(),
+                    filterCource: $("#select2").val(),
+                    filterGroup: $("#select3").val()
+                },
+                success: function (data) {
+                    $("#studenttable").html(data);
+                    clickOnBtn();         //вешает слушатели на button из Partial 
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+    });
+    function saveUpdate() {        
+        $("#save").on("click", function () {
+            console.log("Save");
+            const model = getModel();
+            getKart(model);
+        });        
+    }
+
+    function getModel() {
+        var model = {
+            FIO: $("#FIO").val(),
+            Curriculum: {
+                Faculty: $("#Faculty").val(),
+                Speciality: $("#Speciality").val(),
+                Cource: $("#Cource").val(),
+                Group: $("#Group").val()
+            },
+            Address: {
+                City: $("#City").val(),
+                PostIndex: $("#PostIndex").val(),
+                Street: $("#Street").val()
+            },
+            Contacts: {
+                Phone: $("#Phone").val(),
+                Email: $("#Email").val()
+            }
+        }
+        return model;
+    }
+
+    function getKart(model) {
+        $.ajax({
+            type: "POST",
+            url: "Kartochka/SaveNewKart",
+            data: { model: model },
+            success: function (data) {
+                console.log("Изменения сохранены");
+                $(".message").text('Изменения сохранены');
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    }
+</script> 

@@ -1,0 +1,18 @@
+{
+  "FIO": "Петренко Ян Янович",
+  "Curriculum": {
+    "Faculty": "Разработочка",
+    "Speciality": "труба",
+    "Cource": "2",
+    "Group": "25"
+  },
+  "Address": {
+    "City": "ыва",
+    "PostIndex": "ыва",
+    "Street": "ыав"
+  },
+  "Contacts": {
+    "Phone": "ыва",
+    "Email": "ыва"
+  }
+}

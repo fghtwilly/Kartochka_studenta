@@ -1,0 +1,57 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Kartochka_studenta
+build_property.RootNamespace = Kartochka_studenta
+build_property.ProjectDir = c:\Users\Михаил\ПАПКА\IT\C#\aspnet\Kartochka_studenta\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\Михаил\ПАПКА\IT\C#\aspnet\Kartochka_studenta
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Kartochka/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2FydG9jaGthXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Kartochka/_KartPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2FydG9jaGthXF9LYXJ0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Kartochka/_SelectPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2FydG9jaGthXF9TZWxlY3RQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Михаил/ПАПКА/IT/C\#/aspnet/Kartochka_studenta/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k3dmwkxlt1

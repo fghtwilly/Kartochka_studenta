@@ -1,0 +1,14 @@
+﻿@model StudentViewModel;
+
+@foreach (StudentModel item in Model.studentModel)
+{
+    <tr>
+        <td>@item.FIO</td>
+        <td>@item.Curriculum.Faculty</td>
+        <td>@item.Curriculum.Speciality</td>
+        <td>@item.Curriculum.Cource</td>
+        <td>@item.Curriculum.Group</td>
+        <td><button type="button" class="btnStudent" id="btnStudent">Выбрать</button></td>
+    </tr>
+    <br />
+}

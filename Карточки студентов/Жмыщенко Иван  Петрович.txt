@@ -1,0 +1,18 @@
+{
+  "FIO": "Жмыщенко Иван  Петрович",
+  "Curriculum": {
+    "Faculty": "фак",
+    "Speciality": "спец",
+    "Cource": "3",
+    "Group": "35"
+  },
+  "Address": {
+    "City": "ыва",
+    "PostIndex": "ыва",
+    "Street": "ыва"
+  },
+  "Contacts": {
+    "Phone": "ыва",
+    "Email": "ыва"
+  }
+}

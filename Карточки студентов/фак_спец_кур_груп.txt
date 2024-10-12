@@ -1,0 +1,18 @@
+{
+  "FIO": "фио",
+  "Curriculum": {
+    "Faculty": "фак",
+    "Speciality": "спец",
+    "Cource": "кур",
+    "Group": "груп"
+  },
+  "Address": {
+    "City": "гор",
+    "PostIndex": "258963",
+    "Street": "улца"
+  },
+  "Contacts": {
+    "Phone": "тел",
+    "Email": "пчт"
+  }
+}

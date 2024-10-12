@@ -1,0 +1,18 @@
+{
+  "FIO": "нгр нгр нгрович",
+  "Curriculum": {
+    "Faculty": "мехмат",
+    "Speciality": "мехмат",
+    "Cource": "1",
+    "Group": "05"
+  },
+  "Address": {
+    "City": "ыва",
+    "PostIndex": "ыва",
+    "Street": "ыав"
+  },
+  "Contacts": {
+    "Phone": "ыва",
+    "Email": "ыва"
+  }
+}
